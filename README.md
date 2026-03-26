@@ -9,15 +9,28 @@ Atividade avaliativa 2026.1.01 da disciplina de
 - **Professor**: [L A Minora](https://github.com/leonardo-minora/)
 - **Aluno**: FIXME
 
+---
+
 ## Checklist
+
 - [ ] 1. Fork desse repositório
 - [ ] 2. Substitui neste arquivo (`README.md`) de `FIXME` pelo seu nome
 - [ ] 3. Abrir o VS Code local ou o _codespaces_ para criar os arquivos respostas da avaliação. Preferível o _codespaces_.
+- [ ] 4. Responder as questões abaixos.
+- [ ] 5. Publicar no Github suas repostas.
+
+> 💡 **Dica 01:** Preste atenção nos nomes dos arquivos especificados no texto das questões.
+
+> 💡 **Dica 02:** Lembre de publicar suas respostas no Github de votla, se não eu não consigo acessar suas respostas.
+
+> 💡 **Dica 03:** Dúvidas, pergunte!!! Estamos todos aprendendo.
+
+---
 
 ## Lista de questões
 
 ### Questão 1
-Escreva um programa Python que exiba na tela a mensagem `Olá, mundo!`.
+Escreva um programa Python que exiba na tela a mensagem `Bom dia família infoweb 2026!`.
 
 **Arquivo resposta**: `questao01.py`
 
@@ -60,7 +73,7 @@ Natal
 
 Exemplo de saída:
 ```
-Bem-vinda(o), Ana! Você é de Natal.
+Bem-vinda(o) a avaliação de ILP, Ana! Você é de Natal.
 ```
 
 **Arquivo resposta**: `questao04.py`
@@ -191,24 +204,63 @@ Situação: Aprovado(a)!
 ---
 
 ### Questão 11 — Desafio 🏆
-Escreva um programa Python que leia **4 números inteiros** representando as notas de um aluno em 4 bimestres. O programa deve:
+Escreva um programa Python que leia para 15 alunos uma série de **4 números inteiros** e o **nome do aluno** representando as notas em 4 bimestres de um aluno. O programa deve:
 1. Calcular a média das notas.
 2. Usar `if else` para determinar a situação: **Aprovado** (média ≥ 6), **Recuperação** (4 ≤ média < 6) ou **Reprovado** (média < 4).
-3. Usar um laço `while` para percorrer as notas e imprimir cada uma no formato de linha CSV (separadas por `;` e com `end=';'`), exibindo ao final a média e a situação também separadas por `;`.
+3. Usar um laço `while` ou `for` para percorrer os dados dos alunos e imprimir cada uma no formato de linha CSV (separadas por `;` e com `end=';'`), exibindo ao final a média e a situação também separadas por `;`.
 
 Exemplo de entrada:
 ```
-7
-5
-8
-6
+7 5 8 6 Fulano
+7.1 5.2 8.3 6.4 Cicrano
+7 5 8 6 FulanoCicrano
+7.1 5.2 8.3 6.4 CicranoFulano
+1 2 3 4 CFulano
+4 3 2 1 FCicrano
+4 4 4 4 CF
+5.9 5.9 5.9 5.9 FC
+...
 ```
 
 Exemplo de saída:
 ```
-7;5;8;6;6.5;Aprovado
+7;5;8;6;6.5;Aprovado;Fulano
+7.1;5.2;8.3;6.4;6,75;Aprovado;Cicrano
+7;5;8;6;6.5;Aprovado;FulanoCicrano
+7.1;5.2;8.3;6.4;6.75;Aprovado;CicranoFulano
+1;2;3;4;2.5;Reprovado;CFulano
+4;3;2;1;2.5;Reprovado;FCicrano
+4;4;4;4;4.0;Recuperação;CF
+5.9;5.9;5.9;5.9;5.9;Recuperação;FC
+...
 ```
 
-> **Dica**: use `print(valor, end=';')` para imprimir sem quebra de linha e separando os valores com `;`.
+>;**Dica**: se preferir no lugar de fazer `print(valor, end=';')` use f-string para imprimir sem quebra de linha e separando os valores com `;`.
 
 **Arquivo resposta**: `questao11.py`
+
+## Sintaxe python
+
+```python
+nota_1 = 1
+nota_2 = 2
+
+if nota_1 > nota_2:
+    print("nota 1 maior que nota 2")
+
+if nota_1 == nota_2:
+    print("nota 1 igual a nota 2")
+
+if nota_1 < nota_2:
+    print("nota 1 menor que 2")
+
+if nota_1 > 0:
+    print("nota 1 é números positivo")
+elif nota_1 < 0:
+    print("nota 1 é números negativo")
+else:
+    print("nota 1 é igual a zero")
+
+if nota_1 > 0 and nota_2 > 0:
+    print("ambas a notas são números positivos")
+```
